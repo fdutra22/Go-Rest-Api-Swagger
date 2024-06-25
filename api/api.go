@@ -42,8 +42,8 @@ func ListUsers(w http.ResponseWriter, r *http.Request) {
 //	@Produce	json
 //	@Param		id	path		int	true	"User Id"
 //	@Success	200	{object}	api.User
-//	@Failure	400	{object}	api.APIError	"We need ID!!"
-//	@Failure	404	{object}	api.APIError	"Can not find ID"
+//	@Failure	400	{object}	api.APIError	"ID Necessário!!"
+//	@Failure	404	{object}	api.APIError	"ID não encontrado"
 //	@Router		/admin/user/{id} [get]
 func GetUser(w http.ResponseWriter, r *http.Request) {
 
@@ -56,9 +56,8 @@ func GetUser(w http.ResponseWriter, r *http.Request) {
 //	@Accept		json
 //	@Produce	json
 //	@Param		message	body		api.User		true	"User Data"
-//	@Success	200		{string}	string			"ok"
-//	@Failure	400		{object}	api.APIError	"We need ID!!"
-//	@Failure	404		{object}	api.APIError	"Can not find ID"
+//	@Failure	400	{object}	api.APIError	"ID Necessário!!"
+//	@Failure	404	{object}	api.APIError	"ID não encontrado""
 //	@Router		/admin/user/ [post]
 func AddUser(w http.ResponseWriter, r *http.Request) {
 
@@ -70,10 +69,10 @@ func AddUser(w http.ResponseWriter, r *http.Request) {
 //	@Tags		admin
 //	@Accept		json
 //	@Produce	json
-//	@Param		message	body		api.User		true	"User Data"
+//	@Param		message	body		api.User		true	"Dados usuário"
 //	@Success	200		{string}	string			"ok"
-//	@Failure	400		{object}	api.APIError	"We need ID!!"
-//	@Failure	404		{object}	api.APIError	"Can not find ID"
+//	@Failure	400	{object}	api.APIError	"ID Necessário!!"
+//	@Failure	404	{object}	api.APIError	"ID não encontrado"
 //	@Router		/admin/user/ [put]
 func UpdateUser(w http.ResponseWriter, r *http.Request) {
 
